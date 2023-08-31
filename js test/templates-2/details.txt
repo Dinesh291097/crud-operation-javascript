@@ -1,0 +1,19 @@
+
+
+Font Name:
+font-family: 'Lexend', sans-serif;
+
+******color******
+primary-color: #FFC038
+secondary-color: #0B0A08
+
+other colors:
+#FFFFFF,
+#C0C0C0,
+#0B0A08
+
+
+body background color "#0B0A08"
+
+
+

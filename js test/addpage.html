@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product added</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-body">
+                <form id="form">
+                    <input type="hidden" name="id" id="id">
+                    <label for="">Product Name:</label>
+                    <input type="text" placeholder="enter item name" class="form-control" id="name" name="name" value="" required><br> 
+                    <label for="">Product quantity:</label>
+                    <input type="text" placeholder="enter no of items" class="form-control" id="quantity" value="" name="quantity" required><br> 
+                    <label for="">MRP:</label>
+                    <input type="text" placeholder="enter item name" class="form-control" id="mrp" name="mrp" value="" required><br> 
+                    <label for="">Sale price:</label>
+                    <input type="text" placeholder="enter item name" class="form-control" id="sale" name="sale" value="" required><br> 
+                    <button class="btn btn-sm btn-info" type="button" id="submit" onclick="save()" style="width: 32%;">
+                    Submit it!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src='javascipt/addpage.js'></script>
+    
+</body>
+</html>

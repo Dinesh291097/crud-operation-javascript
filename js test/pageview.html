@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product dispaly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+         body {
+            background-image: linear-gradient(to right , #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="datatable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Product Name</th>
+                                <th>Product Quantity</th>
+                                <th>MRP</th>
+                                <th>Sale price</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="width: 20%;" class="btn btn-primary" >
+    <a href="/addpage.html" type="button" style="text-decoration:none;color: rgb(79, 228, 10); text-transform: uppercase;">Add Items</a>
+    </button>
+     
+    <div class="d-flex">
+
+        <form action="" style="display: none;" id="form">
+            <input type="text" class="form-control my-2" value="name" name="name" id="name" required><br>
+            <input type="text" class="form-control my-2" value="quantity" name="quantity" id="quantity" required><br>
+            <input type="text" class="form-control my-2" value="mrp" name="mrp" id="mrp" required><br>
+            <input type="text" class="form-control my-2" value="sale" name="sale" id="sale" required>
+            <button type="submit" class="btn btn-success">Submit</button>
+         
+        </form>
+
+    </div>
+
+    <script src="/javascipt/pageview.js"></script>
+    
+</body>
+</html>

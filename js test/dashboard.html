@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+      font-family: 'Times New Roman', Times, serif;
+      margin-left: 37%;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+    <div id="board">
+      <h2>welcome to our website!</h2>
+      <h3>mr/mrs <span id=user style="color:crimson"></span></h3>
+      <h5>product count <b><span id='count'></span></b></h5>
+
+  
+  <button type="button" class="btn btn-danger" onclick="out()" style="width: 25%;">Logout</button>
+  <button type="button" class="btn btn-primary" style="width: 25%;"><a href="/pageview.html"
+      style="text-decoration: none; color: whitesmoke;">product view</a></button>
+
+  </div>
+  <div id="board1">
+    <h1>please login <span><a href='/login.html'><button class="btn btn-danger">Login</button></a></span></h1>
+    <div class="col-md-6">
+      <img src="/images/image/qustion.gif">
+    </div>
+
+  </div>
+
+  <script>
+
+var board=document.getElementById('board')
+    var board1=document.getElementById('board1')
+    existingUserData = JSON.parse(localStorage.getItem("loginuser"));
+    console.log(existingUserData);
+    if(existingUserData){
+      board.style.display='block';
+      board1.style.display='none';
+
+    }
+    else{
+      board.style.display='none';
+      board1.style.display='block';
+
+    }
+    
+
+    let display = JSON.parse(localStorage.getItem('loginuser'))
+    // console.log(display.uname);
+    let output = display.uname
+    document.getElementById('user').innerHTML = output.toUpperCase();
+
+    let name = localStorage.getItem('loginuser') ? localStorage.getItem('loginuser') : ''
+
+    // document.getElementById('user').innerHTML=name["uname"];
+    function out() {
+      localStorage.removeItem("loginuser");
+      window.location.href = "first.html"
+    }
+    const existingitem = JSON.parse(localStorage.getItem('itemData')) ?? []
+    // console.log(existingitem.length);
+    let data = existingitem.length
+    document.getElementById('count').innerHTML = data
+
+  </script>
+  <!-- <script>
+   var board=document.getElementById('board')
+    var board1=document.getElementById('board1')
+    existingUserData = JSON.parse(localStorage.getItem("loginuser"));
+    console.log(existingUserData);
+    if(existingUserData){
+      board.style.display='block';
+      board1.style.display='none';
+
+    }
+    else{
+      board.style.display='none';
+      board1.style.display='block';
+
+    }
+    
+  </script> -->
+
+</body>
+
+</html>
